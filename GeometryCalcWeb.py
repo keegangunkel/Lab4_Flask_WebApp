@@ -51,7 +51,7 @@ def sphereForm():
        radius = request.form.get("rad")
        vol = sphere.volume(int(radius))
        surfArea = sphere.surfaceArea(int(radius))
-       return "User entered: Radius "+ str(radius) + ". <p>The Volume is: " + str(vol)
+       return "User entered: Radius "+ str(radius) + ". <p>The Volume is: " + str(vol) + " and the Surface area is: " + str(surfArea) + render_template("sphere-answers.html")
    return render_template("sphere.html")
 
 #more code here for the rest of the calculators: sphere, cube, etc.
