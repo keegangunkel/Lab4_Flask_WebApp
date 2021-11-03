@@ -9,7 +9,8 @@
 #
 # imports
 from flask import Flask, request, render_template, redirect, url_for
-import cylinder #<--why?
+import cylinder
+import sphere
 
 #flask plumbing
 app = Flask(__name__)
@@ -24,6 +25,7 @@ def mainForm():
       print("Selection was: ", sphere, cylinder) #prints to command line for trouble shooting
       if sphere == "on":
          print("User selected sphere") #prints to command line for trouble shooting
+         return redirect(url_for('sphereForm'))
       elif cylinder == "on":
          print("User selected cylinder") #prints to command line for trouble shooting
          return redirect(url_for('cylinderForm'))
@@ -40,6 +42,15 @@ def cylinderForm():
        vol = cylinder.volume(int(radius), int(height))
        return "User entered: Radius "+ str(radius) + " and Height: " + str(height) + ". <p>The Volume is: " + str(vol)
    return render_template("cylinder.html")
+
+@app.route("/sphere", methods = ["GET", "POST"])
+def sphereForm():
+   if request.method == "POST":
+       # getting input with name = fname in HTML form
+       radius = request.form.get("rad")
+       vol = sphere.volume(int(radius))
+       return "User entered: Radius "+ str(radius) + ". <p>The Volume is: " + str(vol)
+   return render_template("sphere.html")
 
 #more code here for the rest of the calculators: sphere, cube, etc.
   
