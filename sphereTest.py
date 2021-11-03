@@ -8,8 +8,8 @@ class sphereTest(unittest.TestCase):
         assert(sphere.volume(5) ==  523.5987755982989)
 
 
-    def test_volume2(self):
-        assert(sphere.volume(69) == 1376055.2813841724)
+    def test_surfaceArea(self):
+        assert(sphere.surfaceArea(5) == 314.1592653589793)
 
 
 

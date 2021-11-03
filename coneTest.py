@@ -8,8 +8,8 @@ class coneTest(unittest.TestCase):
         assert(cone.volume(5,10) ==  261.79938779914943)
 
 
-    def test_volume2(self):
-        assert(cone.volume(7,69) == 3540.5749205956963)
+    def test_surfaceArea(self):
+        assert(cone.surfaceArea(5,10) == 254.160184615763)
 
 
 

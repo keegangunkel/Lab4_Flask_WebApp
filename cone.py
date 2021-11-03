@@ -7,8 +7,12 @@
 ####################################################
 import math
 
-def surfaceArea():
-    pass
+#Method to find surface area
+def surfaceArea(radius, height):
+    surfaceArea = math.pi * radius * (radius + math.sqrt (height**2 + radius**2))
+    return surfaceArea
+
+# Method to find volume
 
 def volume(radius, height):
     volume = math.pi * radius**2 * height/3

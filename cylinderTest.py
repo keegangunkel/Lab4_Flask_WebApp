@@ -7,8 +7,8 @@ class cylinderTest(unittest.TestCase):
     def test_volume1(self):
         assert(cylinder.volume(10,32) == 10053.096491487338)
 
-    def test_volume2(self):
-        assert(cylinder.volume(10,100) == 31415.926535897932)
+    def test_surfaceArea(self):
+        assert(cylinder.surfaceArea(5,10) == 471.23889803846896)
 
     #failing test
     #def test_volume3(self):
