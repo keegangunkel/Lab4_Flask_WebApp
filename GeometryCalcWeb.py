@@ -60,7 +60,7 @@ def sphereForm():
        return "User entered: Radius "+ str(radius) + ". <p>The Volume is: " + str(vol) + " and the Surface area is: " + str(surfArea) + render_template("sphere-answers.html")
    return render_template("sphere.html")
 
-#flask route for the cylinder calculations page
+#flask route for the cone calculations page
 @app.route("/cone", methods = ["GET", "POST"])
 def coneForm():
    if request.method == "POST":
