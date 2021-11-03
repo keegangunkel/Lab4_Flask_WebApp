@@ -40,7 +40,8 @@ def cylinderForm():
        # getting input with name = lname in HTML form 
        height = request.form.get("hgt") 
        vol = cylinder.volume(int(radius), int(height))
-       return "User entered: Radius "+ str(radius) + " and Height: " + str(height) + ". <p>The Volume is: " + str(vol)
+       surfArea = cylinder.surfaceArea(int(radius), int(height))
+       return "User entered: Radius "+ str(radius) + " and Height: " + str(height) + ". <p>The Volume is: " + str(vol) + " and the Surface Area is: " + str(surfArea) + "." + render_template("cylinder-answers.html")
    return render_template("cylinder.html")
 
 @app.route("/sphere", methods = ["GET", "POST"])
@@ -49,6 +50,7 @@ def sphereForm():
        # getting input with name = fname in HTML form
        radius = request.form.get("rad")
        vol = sphere.volume(int(radius))
+       surfArea = sphere.surfaceArea(int(radius))
        return "User entered: Radius "+ str(radius) + ". <p>The Volume is: " + str(vol)
    return render_template("sphere.html")
 

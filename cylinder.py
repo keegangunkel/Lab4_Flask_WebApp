@@ -7,8 +7,9 @@
 ####################################################
 import math
 
-def surfaceArea():
-    pass
+def surfaceArea(radius, height):
+    surfaceArea = 2 * math.pi * radius * height + 2* math.pi * radius**2
+    return surfaceArea
 
 def volume(rad, hi):
     volume = math.pi * rad * rad * hi
