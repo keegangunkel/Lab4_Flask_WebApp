@@ -4,7 +4,7 @@
 #
 # Sample Code for the Python Flask Web App Implementation of the Geometry Calculator
 #
-# Author: Joe Axberg
+# Author: Keegan Gunkel
 # Orig Date: 9/22/2021
 #
 # imports
